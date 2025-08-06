@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vibe Template - Modern Web Development Template",
-  description: "Professional web development template based on Next.js 15, TypeScript and Shadcn/UI, designed for Claude AI-assisted development",
+  title: "溫柔生活研習所 - 和風生活美學引導者",
+  description: "探索簡約美學與內心平靜，在侘寂美學中找到生活的真諦。結合身心靈課程與生活美學商品的療癒電商平台。",
 };
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="zh-TW">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

@@ -76,6 +76,16 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  
+  /* Japanese Aesthetic Color Variables */
+  --warm-rice: #F7F3E9;
+  --deep-charcoal: #2D2D2D;
+  --matcha-green: #A8C09A;
+  --sakura-pink: #E8B4B8;
+  --washi-yellow: #F4E4C1;
+  --blue-ink: #4A5568;
+  --persimmon-orange: #D4A574;
+  --light-stone: #E6DDD4;
 }
 
 .dark {
@@ -118,5 +128,37 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  
+  .japanese-gradient {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F7F3E9 50%, #F4E4C1 100%);
+  }
+  
+  .warm-card {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F7F3E9 100%);
+  }
+  
+  .matcha-green {
+    color: var(--matcha-green);
+  }
+  
+  .sakura-pink {
+    color: var(--sakura-pink);
+  }
+  
+  .persimmon-orange {
+    color: var(--persimmon-orange);
+  }
+  
+  .washi-bg {
+    background-color: var(--washi-yellow);
+  }
+  
+  .enhanced-shadow {
+    box-shadow: 0 10px 30px rgba(168, 192, 154, 0.15);
+  }
+  
+  .enhanced-shadow:hover {
+    box-shadow: 0 15px 40px rgba(168, 192, 154, 0.25);
   }
 }
