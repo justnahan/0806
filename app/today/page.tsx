@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import UnifiedNav from '@/components/unified-nav'
 
 export const metadata: Metadata = {
   title: '今日感受 - 溫柔生活研習所',
@@ -12,25 +13,7 @@ export default function TodayPage() {
   return (
     <div className="min-h-screen japanese-gradient">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-stone-200/50 transition-all duration-300">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-8">
-              <Link href="/" className="text-xl font-light text-slate-800 tracking-wide hover:text-orange-600 transition-colors duration-300">
-                溫柔生活研習所
-                <span className="ml-2 text-sm text-orange-500">和</span>
-              </Link>
-              <div className="hidden md:flex space-x-6">
-                <Link href="/today" className="text-slate-900 font-medium bg-green-100 text-green-700 px-3 py-1 rounded-full">今日感受</Link>
-                <Link href="/courses" className="text-slate-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-1 rounded-full transition-all duration-200">課程探索</Link>
-                <Link href="/products" className="text-slate-600 hover:text-purple-600 hover:bg-purple-50 px-3 py-1 rounded-full transition-all duration-200">生活選物</Link>
-                <Link href="/profile" className="text-slate-600 hover:text-pink-600 hover:bg-pink-50 px-3 py-1 rounded-full transition-all duration-200">我的空間</Link>
-                <Link href="/about" className="text-slate-600 hover:text-yellow-600 hover:bg-yellow-50 px-3 py-1 rounded-full transition-all duration-200">關於我們</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <UnifiedNav currentPage="today" />
 
       {/* Main Content */}
       <main className="py-16 px-6">
