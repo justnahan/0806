@@ -136,12 +136,48 @@ export default async function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Hero Section with Loading Animation Elements */}
+      <section className="relative py-20 px-6 overflow-hidden">
+        {/* Floating sakura petals from loading page */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="w-3 h-3 bg-pink-300 rounded-full opacity-40 animate-bounce absolute top-20 left-1/4" style={{ animationDelay: '0s', animationDuration: '4s' }}></div>
+          <div className="w-2 h-2 bg-orange-300 rounded-full opacity-30 animate-bounce absolute top-32 right-1/3" style={{ animationDelay: '1s', animationDuration: '5s' }}></div>
+          <div className="w-2 h-2 bg-green-300 rounded-full opacity-35 animate-bounce absolute bottom-40 left-1/3" style={{ animationDelay: '2s', animationDuration: '6s' }}></div>
+          <div className="w-3 h-3 bg-yellow-300 rounded-full opacity-25 animate-bounce absolute bottom-20 right-1/4" style={{ animationDelay: '3s', animationDuration: '4.5s' }}></div>
+          <div className="w-2 h-2 bg-purple-300 rounded-full opacity-30 animate-bounce absolute top-1/2 left-10" style={{ animationDelay: '1.5s', animationDuration: '5.5s' }}></div>
+          <div className="w-3 h-3 bg-blue-300 rounded-full opacity-20 animate-bounce absolute top-1/3 right-10" style={{ animationDelay: '2.5s', animationDuration: '4.2s' }}></div>
+        </div>
+
+        {/* Decorative SVG elements from loading page */}
+        <div className="absolute inset-0 pointer-events-none">
+          <svg className="absolute top-16 left-16 w-16 h-16 text-green-200 opacity-15 animate-pulse" fill="currentColor" viewBox="0 0 100 100" style={{ animationDuration: '6s' }}>
+            <path d="M50,10 Q70,30 50,50 Q30,30 50,10 Z" />
+          </svg>
+          <svg className="absolute bottom-24 right-16 w-12 h-12 text-pink-200 opacity-20 animate-pulse" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 100 100" style={{ animationDuration: '7s' }}>
+            <circle cx="50" cy="50" r="40" strokeDasharray="5,5" />
+          </svg>
+          <svg className="absolute top-1/2 left-20 w-10 h-10 text-orange-200 opacity-25 animate-pulse" fill="currentColor" viewBox="0 0 100 100" style={{ animationDuration: '5s' }}>
+            <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="3,3" />
+          </svg>
+        </div>
+
+        <div className="max-w-4xl mx-auto text-center relative">
+          {/* Central zen circle inspired by loading animation */}
+          <div className="mb-8 flex justify-center">
+            <div className="w-20 h-20 border-2 border-orange-300 rounded-full animate-pulse flex items-center justify-center opacity-60" style={{ animationDuration: '4s' }}>
+              <div className="w-10 h-10 bg-gradient-to-r from-orange-200 to-pink-200 rounded-full animate-spin" style={{ animationDuration: '8s' }}></div>
+            </div>
+          </div>
+
           <h1 className="text-4xl md:text-5xl font-light text-slate-800 leading-relaxed mb-8 tracking-wide">
             今日，你想要...
           </h1>
+          
+          {/* Seasonal indicator from loading page */}
+          <div className="inline-block mb-8 text-xs text-orange-600 bg-orange-50 px-3 py-1 rounded-full border border-orange-200 animate-pulse" style={{ animationDuration: '3s' }}>
+            夏の候 - 夏日時光
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-3xl mx-auto mb-12">
             {[
               { text: '尋找內心平靜', color: 'hover:bg-green-50 hover:border-green-300 hover:text-green-700' },
@@ -185,20 +221,30 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Philosophy Section */}
+      {/* Philosophy Section with Enhanced Loading Animation Elements */}
       <section className="py-16 px-6 washi-bg relative overflow-hidden">
+        {/* Enhanced animated background from loading page */}
         <div className="absolute inset-0 opacity-10">
-          <svg className="absolute top-10 left-10 w-20 h-20 text-orange-300" fill="currentColor" viewBox="0 0 100 100">
+          <svg className="absolute top-10 left-10 w-20 h-20 text-orange-300 animate-pulse" fill="currentColor" viewBox="0 0 100 100" style={{ animationDuration: '5s' }}>
             <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="5,5" />
           </svg>
-          <svg className="absolute bottom-10 right-10 w-16 h-16 text-green-300 rotate-45" fill="currentColor" viewBox="0 0 100 100">
+          <svg className="absolute bottom-10 right-10 w-16 h-16 text-green-300 rotate-45 animate-pulse" fill="currentColor" viewBox="0 0 100 100" style={{ animationDuration: '6s' }}>
             <polygon points="50,10 90,90 10,90" fill="none" stroke="currentColor" strokeWidth="2" />
           </svg>
-          <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-pink-300 rounded-full opacity-30"></div>
-          <div className="absolute bottom-1/3 left-1/4 w-3 h-3 bg-blue-300 rounded-full opacity-20"></div>
+          
+          {/* Additional floating elements from loading animation */}
+          <div className="w-2 h-2 bg-pink-300 rounded-full opacity-30 animate-bounce absolute top-1/3 right-1/4" style={{ animationDelay: '0.5s', animationDuration: '3s' }}></div>
+          <div className="w-3 h-3 bg-blue-300 rounded-full opacity-20 animate-bounce absolute bottom-1/3 left-1/4" style={{ animationDelay: '1.2s', animationDuration: '4s' }}></div>
+          <div className="w-2 h-2 bg-yellow-300 rounded-full opacity-25 animate-bounce absolute top-1/2 left-1/2" style={{ animationDelay: '2s', animationDuration: '3.5s' }}></div>
+          <div className="w-3 h-3 bg-green-300 rounded-full opacity-15 animate-bounce absolute top-20 right-20" style={{ animationDelay: '0.8s', animationDuration: '4.2s' }}></div>
+          
+          {/* Zen circle elements from loading */}
+          <div className="absolute top-1/4 left-1/3 w-12 h-12 border border-orange-200 rounded-full animate-pulse" style={{ animationDuration: '4s' }}>
+            <div className="w-4 h-4 bg-gradient-to-r from-orange-100 to-pink-100 rounded-full m-4 animate-spin" style={{ animationDuration: '6s' }}></div>
+          </div>
         </div>
         <div className="max-w-4xl mx-auto text-center relative">
-          <div className="inline-block mb-4 text-xs text-orange-600 bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+          <div className="inline-block mb-4 text-xs text-orange-600 bg-orange-50 px-3 py-1 rounded-full border border-orange-200 animate-pulse" style={{ animationDuration: '3s' }}>
             夏の候 - 夏日時光
           </div>
           <h3 className="text-2xl font-light text-slate-800 mb-8 tracking-wide">
