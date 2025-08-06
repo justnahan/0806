@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { supabase, generateRefLink, Product } from '@/lib/supabase'
+import UnifiedNav from '@/components/unified-nav'
 
 export const metadata: Metadata = {
   title: '生活選物 - 溫柔生活研習所',
@@ -82,26 +83,9 @@ export default async function ProductsPage() {
   const products = await getProducts();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">
+    <div className="min-h-screen japanese-gradient">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-8">
-              <Link href="/" className="text-xl font-light text-slate-800 tracking-wide">
-                溫柔生活研習所
-              </Link>
-              <div className="hidden md:flex space-x-6">
-                <Link href="/today" className="text-slate-600 hover:text-slate-900">今日感受</Link>
-                <Link href="/courses" className="text-slate-600 hover:text-slate-900">課程探索</Link>
-                <Link href="/products" className="text-slate-900 font-medium">生活選物</Link>
-                <Link href="/profile" className="text-slate-600 hover:text-slate-900">我的空間</Link>
-                <Link href="/about" className="text-slate-600 hover:text-slate-900">關於我們</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <UnifiedNav currentPage="products" />
 
       {/* Main Content */}
       <main className="py-16 px-6">
